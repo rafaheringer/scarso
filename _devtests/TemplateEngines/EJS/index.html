@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJS Template Test</title>
+	<script type="text/javascript" src="ejs.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		/* Lista Simples */
+		//var data = {name: "Foo", items: ["Banana", "Apple", "Orange"]};
+		//var rendered = new EJS({url: "tmpl.ejs"}).render(data);
+		
+		/* Lista com objetos e interações */
+		var data = {name: "Foo", items: [{"type": "Fruit", "name": "Banana"}, {"type": "Color", "name": "Orange"},  {"type": "Idiot", "name": "Human"}]};
+		var rendered = new EJS({url: "tmpl2.ejs"}).render(data);
+		
+		$(function(){
+			$('body').append(rendered);
+		});
+	</script>	
+</head>
+<body>
+	
+</body>
+</html>

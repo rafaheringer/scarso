@@ -1,0 +1,7 @@
+<ul>
+<% for(var i=0; i<items.length; i++) { var item = items[i]; %>
+	<% if(item.name != "Human") { %>
+		<li><%= i %> - <%= item.name %> is a <%= item.type %></li>
+	<% } %>
+<% } %>
+</ul>
